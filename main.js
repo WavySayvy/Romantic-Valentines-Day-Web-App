@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const icon = muteButton.querySelector("i");
     const videoCard = document.querySelector(".aside.left"); // Video card
     const video = videoCard.querySelector("video"); // Get video element
+    video.src = "assets/video.mp4";
+    video.muted = false; // Unmute
+document.body.addEventListener("click", () => {
+    video.play();
+});
     const clickButton = document.querySelector(".click-box button");
     const choiceBox = document.querySelector(".choice-box");
     const threedBox = document.querySelector(".threed-box");
